@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="flex justify-center items-center w-[100vw] h-[100vh] font-spartan
+    bg-[linear-gradient(45deg,_rgba(255,126,176,1)_0%,_rgba(131,92,92,1)_100%)]">
+        <div class="max-w-[450px] w-[90%] flex flex-col ">
+            <h1 class="text-[2em] opacity-[0.75] uppercase leading-[1.2] tracking-[2px] text-center font-extrabold text-plWhite">
+                PASSWORD GENERATOR</h1>
+
+            <div class="relative w-[100%] bg-dkViolet border-b-[0.35em] border-ltViolet2 rounded-[1rem] pt-[0.35rem] my-[1rem] mx-0 ">
+
+                <input readonly placeholder="Password" id="passwordDisplay" class="placeholder:absolute placeholder:top-[50%] 
+                placeholder:left-[1.5rem] placeholder:text-[1.5rem] placeholder:leading-[30px] placeholder:text-vbYellow 
+                placeholder:opacity-[0.65] placeholder:uppercase placeholder:-translate-y-[50%]
+                bg-transparent outline-none border-none 
+                px-[1.15rem] py-[1rem] pr-[3.25rem] text-vbYellow font-semibold text-[1.5rem] leading-[30px] tracking-[1px]">
+                <button id="copyBtn" class="absolute top-[35%] right-[0.5rem] -translate-y-[50%]">
+                    <span id="copyMsg" class="absolute bg-vbViolet2 text-vbYellow text-[1.25rem] -top-[40px] -left-[67px]
+                        px-[10px] rounded-[1rem] origin-bottom opacity-0 scale-0 transition-transform duration-[250ms] ease-in-out">
+                        Copied</span>
+                    <i class="fa-regular fa-copy text-vbCyan2 absolute right-[1.5rem] top-[50%] "></i>
+                </button>
+
+            </div>
+
+            <div class="w-[100%] bg-dkViolet p-[2rem] rounded-[1rem] border-b-[0.35rem] border-ltViolet2">
+                <div class="flex justify-between items-center">
+                    <p class="text-white text-[1.5rem]">Password Length</p>
+                    <p class="text-vbYellow text-[1.5rem]" id="numberLength">0</p>
+                </div>
+
+
+                <input class="appearance-none w-[100%] h-[0.75rem] mt-[2rem] mb-[1.5rem] border-none outline-none cursor-pointer 
+                bg-ltViolet rounded-[1rem] bg-no-repeat bg-gradient-to-r from-vbViolet to-vbViolet" style="background-size: 47.3684% 100%;"
+                id="slider" type="range" min="1" max="20" step="1">
+
+
+
+                <div>
+                    <div class="flex items-center my-[1rem] mx-0 gap-y-0 gap-x-[1rem]">
+                        <input class="appearance-none w-[20px] h-[20px] border-[1px] border-vbCyan cursor-pointer relative 
+                        rounded-[0.35rem] checked:bg-vbCyan" type="checkbox" id="uc">
+                        <label class="text-white text-[1.25rem] tracking-[0.75px]" for="uc">Includes uppercase</label>
+                    </div>
+                    <div class="flex items-center my-[1rem] mx-0 gap-y-0 gap-x-[1rem]">
+                        <input class="appearance-none w-[20px] h-[20px] border-[1px] border-vbCyan cursor-pointer relative 
+                        rounded-[0.35rem] checked:bg-vbCyan" type="checkbox" id="lc">
+                        <label class="text-white text-[1.25rem] tracking-[0.75px]" for="lc">Includes lowercase</label>
+                    </div>
+                    <div class="flex items-center my-[1rem] mx-0 gap-y-0 gap-x-[1rem]">
+                        <input class="appearance-none w-[20px] h-[20px] border-[1px] border-vbCyan cursor-pointer relative 
+                        rounded-[0.35rem] checked:bg-vbCyan" type="checkbox" id="num">
+                        <label class="text-white text-[1.25rem] tracking-[0.75px]" for="num">Includes numbers</label>
+                    </div>
+                    <div class="flex items-center my-[1rem] mx-0 gap-y-0 gap-x-[1rem]">
+                        <input class="appearance-none w-[20px] h-[20px] border-[1px] border-vbCyan cursor-pointer relative 
+                        rounded-[0.35rem] checked:bg-vbCyan" type="checkbox" id="sym">
+                        <label class="text-white text-[1.25rem] tracking-[0.75px]" for="sym">Includes symbols</label>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between items-center mt-[1.75rem] mb-[2rem]">
+                    <p class="text-white text-[1.5rem]">Strength</p>
+                    <div class="w-[1.5rem] h-[1.5rem] rounded-full" id="strength"></div>
+                </div>
+                <button class="uppercase w-[100%] py-[1rem] px-0 bg-vbViolet text-center rounded-[0.75rem] border-b-[0.35rem] 
+                border-vbYellow tracking-[1px] text-vbYellow font-extrabold text-[1.25rem] hover:bg-vbViolet2 transition-all duration-300" id="generate">Generate Password</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://kit.fontawesome.com/3b3e818c9f.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

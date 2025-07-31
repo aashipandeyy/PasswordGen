@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+@tailwind base;  
+@tailwind components;  
+@tailwind utilities;
+input:checked::before{
+    content:'✓';
+    position: absolute;
+    color: hsl(268, 75%, 9%);
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 50%;
+    top: -3.5px;
+    transform: translateX(-50%);
+}
+#slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: hsl(52, 100%, 62%);
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255,229,61,0.50);
+    transition: all 200ms ease-in;
+}
+#slider:focus{
+    outline: 3px solid hsl(52, 100%, 62%);
+}
+#slider::-webkit-slider-thumb:hover{
+    border: 2px solid hsl(52, 100%, 62%);
+    background-color: hsl(268, 75%, 9%);
+    box-shadow: 0px 0px 25px 5px rgba(255,229,61);
+}
+#copyMsg.active {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
