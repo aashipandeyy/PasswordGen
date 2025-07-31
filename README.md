@@ -16,7 +16,7 @@ A simple, responsive password generator with customizable options and real-time 
 - JavaScript  
 
 ## Live Demo
-[https://password-generator-aashi.netlify.app/]
+https://password-generator-aashi.netlify.app/
 
 ## Run Locally
 
