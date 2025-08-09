@@ -19,7 +19,6 @@ let passlen=10;
 let checkCount=0;
 handleSlider();
 setStrength('#ccc');
-// let initStrengthCircleColor=;
 
 //sets password length
 //reflect password length on the UI
@@ -34,7 +33,6 @@ slider.addEventListener('input',(e)=>{
     passlen=e.target.value;
     handleSlider();
 })
-
 
 function setStrength(color){
     strength.style.backgroundColor=color;
